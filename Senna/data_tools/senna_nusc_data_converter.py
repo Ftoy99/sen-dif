@@ -309,6 +309,7 @@ def _fill_trainval_infos(nusc,
     frame_idx = 0
     cat2idx = {}
     for dic in nusc.category:
+        print(dic)
         cat2idx[dic['name']] = dic['index']
 
     for sample in tqdm(nusc.sample):
