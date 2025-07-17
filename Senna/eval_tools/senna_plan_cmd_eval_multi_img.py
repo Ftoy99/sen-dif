@@ -17,7 +17,7 @@ save_path = '/job_data/pred_result.json'
 model_name = get_model_name_from_path(model_path)
 
 tokenizer, model, image_processor, context_len = load_senna_pretrained_model(
-    model_path, None, model_name='llava', device_map=0)
+    model_path, None, model_name='llava')
 
 
 with open(eval_data_path, 'r') as file:
