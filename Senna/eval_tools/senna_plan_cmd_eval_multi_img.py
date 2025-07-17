@@ -9,7 +9,7 @@ from Senna.data_tools.senna_qa_utils import eval_multi_img_model_wo_init
 
 
 eval_data_path = '/path/to/your/eval/data/eval_plan_qa.json'
-model_path = "/path/to/the/model"
+model_path = "rb93dett/Senna"
 save_path = "/path/to/save/eval/result/eval_result.json"
 save_path = '/job_data/pred_result.json'
 
