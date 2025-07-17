@@ -9,12 +9,13 @@ from Senna.data_tools.senna_qa_utils import eval_multi_img_model_wo_init
 
 
 eval_data_path = '/path/to/your/eval/data/eval_plan_qa.json'
-model_path = "rb93dett/Senna"
+model_path = "Senna/models/Senna"
 save_path = "/path/to/save/eval/result/eval_result.json"
 save_path = '/job_data/pred_result.json'
 
 # load vlm model and generate
 model_name = get_model_name_from_path(model_path)
+
 tokenizer, model, image_processor, context_len = load_senna_pretrained_model(
     model_path, None, model_name='llava', device_map=0)
 
