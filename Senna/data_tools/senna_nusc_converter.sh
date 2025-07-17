@@ -1,7 +1,7 @@
 echo "Start generating dataset..."
 
 python3 \
-    data_tools/senna_nusc_data_converter.py \
+    Senna/data_tools/senna_nusc_data_converter.py \
     nuscenes \
     --root-path nu_mini \
     --out-dir nu_mini_adapted \
