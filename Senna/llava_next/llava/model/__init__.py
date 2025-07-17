@@ -12,7 +12,7 @@ AVAILABLE_MODELS = {
 
 for model_name, model_classes in AVAILABLE_MODELS.items():
     try:
-        exec(f"from .language_model.{model_name} import {model_classes}")
+        exec(f"from Senna.llava_next.llava.model.language_model.{model_name} import {model_classes}")
     except ImportError:
         # import traceback
         # traceback.print_exc()
