@@ -290,8 +290,8 @@ def _fill_trainval_infos(nusc,
 
     # load vlm model and generate
     from Senna.llava_next.llava.model.builder import load_pretrained_model
-    pretrained = "llava-hf/llava-v1.6-mistral-7b-hf"
-    model_name = "llava-v1.6-mistral-7b-hf"
+    pretrained = "liuhaotian/llava-v1.6-34b"
+    model_name = "llava-v1.6-34b"
     device_map = "auto"
     tokenizer, model, image_processor, max_length = load_pretrained_model(
         pretrained,
