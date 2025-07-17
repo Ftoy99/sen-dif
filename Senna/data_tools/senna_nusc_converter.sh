@@ -6,5 +6,5 @@ python3 \
     --root-path nu_mini \
     --out-dir nu_mini_adapted \
     --extra-tag senna_nusc \
-    --version v1.0 \
+    --version v1.0-mini \
     --canbus /path/to/nuscenes/canbus
