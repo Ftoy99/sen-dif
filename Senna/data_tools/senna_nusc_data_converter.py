@@ -310,7 +310,7 @@ def _fill_trainval_infos(nusc,
     cat2idx = {}
     for dic in nusc.category:
         print(dic)
-        cat2idx[dic['name']] = dic['index']
+        cat2idx[dic['name']] = nus_categories.index(NameMapping[dic['name']])
 
     for sample in tqdm(nusc.sample):
         map_location = nusc.get('log', nusc.get('scene', sample['scene_token'])['log_token'])['location']
