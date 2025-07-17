@@ -16,5 +16,5 @@ for model_name, model_classes in AVAILABLE_MODELS.items():
     except ImportError:
         # import traceback
         # traceback.print_exc()
-        print(f"Failed to import {model_name} from llava.language_model.{model_name}")
+        print(f"Failed to import {model_classes} from llava.language_model.{model_name}")
         pass
