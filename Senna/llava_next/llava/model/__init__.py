@@ -1,5 +1,3 @@
-import os
-
 AVAILABLE_MODELS = {
     "llava_llama": "LlavaLlamaForCausalLM, LlavaConfig",
     "llava_gemma": "LlavaGemmaForCausalLM, LlavaGemmaConfig",
@@ -14,7 +12,7 @@ for model_name, model_classes in AVAILABLE_MODELS.items():
     try:
         exec(f"from Senna.llava_next.llava.model.language_model.{model_name} import {model_classes}")
     except ImportError:
-        # import traceback
-        # traceback.print_exc()
+        import traceback
+        traceback.print_exc()
         print(f"Failed to import {model_classes} from llava.language_model.{model_name}")
         pass
