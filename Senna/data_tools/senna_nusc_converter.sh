@@ -7,4 +7,4 @@ python3 \
     --out-dir nu_mini_adapted \
     --extra-tag senna_nusc \
     --version v1.0-mini \
-    --canbus /path/to/nuscenes/canbus
+    --canbus /mnt/jimmys/sen-dif/nu_mini/can_bus
