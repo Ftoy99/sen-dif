@@ -308,9 +308,9 @@ def _fill_trainval_infos(nusc,
     val_nusc_infos = []
     frame_idx = 0
     cat2idx = {}
-    for dic in nusc.category:
+    for idx, dic in enumerate(nusc.category):
         print(dic)
-        cat2idx[dic['name']] = nus_categories.index(NameMapping[dic['name']])
+        cat2idx[dic['name']] = idx
 
     for sample in tqdm(nusc.sample):
         map_location = nusc.get('log', nusc.get('scene', sample['scene_token'])['log_token'])['location']
