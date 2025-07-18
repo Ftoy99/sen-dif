@@ -53,7 +53,6 @@ class SennaLlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
         return_image_features = []
         for i in range(image_features.shape[1]):
             image_feature = image_features[:, i]
-            print(f"mm_porjector device {self.get_model().mm_projector.device}")
             image_feature = self.get_model().mm_projector(image_feature)  # [B, 576, 1024] -> [B, 576, 4096]
             image_feature = self.get_model().img_adapter(image_feature)  # [B, 576, 4096] -> [B, 128, 4096]
             new_image_features.append(image_feature)
