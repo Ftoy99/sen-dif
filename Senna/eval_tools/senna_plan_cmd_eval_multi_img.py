@@ -1,5 +1,6 @@
 import copy
 import json
+import os
 
 from tqdm import tqdm
 from Senna.llava.model.builder import load_senna_pretrained_model
@@ -168,6 +169,8 @@ eval_record['f1_score'] = {}
 for k, v in f1_score.items():
     eval_record['f1_score'][k] = v
 
+dir_path = os.path.dirname(save_path)
+os.makedirs(dir_path, exist_ok=True)
 with open(save_path, "w") as f:
     json.dump(eval_record, f)
     print(f'\nEval results saved to {save_path}\n')
