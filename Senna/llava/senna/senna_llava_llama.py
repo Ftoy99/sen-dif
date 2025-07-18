@@ -53,6 +53,7 @@ class SennaLlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
         return_image_features = []
         for i in range(image_features.shape[1]):
             image_feature = image_features[:, i]
+            print(f"mm_porjector device {self.get_model().mm_projector.device}")
             image_feature = self.get_model().mm_projector(image_feature)  # [B, 576, 1024] -> [B, 576, 4096]
             image_feature = self.get_model().img_adapter(image_feature)  # [B, 576, 4096] -> [B, 128, 4096]
             new_image_features.append(image_feature)
@@ -82,6 +83,8 @@ class SennaLlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
         image_features = self.encode_images(images)  # B*N, 576, 1024
         M, D = image_features.shape[1], image_features.shape[2]
         image_features = image_features.view(B, N, M, D)
+        print(f"features device {image_features.device}")
+        print(f"features device {image_features.device}")
         image_features = self.mm_project(image_features)  # (B*N) * [Q, D]
 
         # TODO: image start / end is not implemented here to support pretraining.
