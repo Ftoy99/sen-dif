@@ -1,1 +1,1 @@
-CUDA_VISIBLE_DEVICES=1 python eval_tools/senna_plan_cmd_eval_multi_img.py
+CUDA_VISIBLE_DEVICES=1 python Senna/eval_tools/senna_plan_cmd_eval_multi_img.py
