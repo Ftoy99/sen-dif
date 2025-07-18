@@ -8,7 +8,7 @@ from Senna.llava.mm_utils import get_model_name_from_path
 from Senna.data_tools.senna_qa_utils import eval_multi_img_model_wo_init
 
 
-eval_data_path = '/mnt/jimmys/sen-dif/nu_mini_adapted/senna_nusc_eval.json'
+eval_data_path = '/mnt/jimmys/sen-dif/nu_mini_adapted/senna_nusc_val.json'
 model_path = "Senna/models/Senna"
 save_path = '/job_data/pred_result.json'
 
