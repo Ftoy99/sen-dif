@@ -224,6 +224,7 @@ def load_senna_pretrained_model(model_path, model_base, model_name, load_8bit=Fa
         if not vision_tower.is_loaded:
             vision_tower.load_model()
         if device_map != 'auto':
+            print(f"SENDING VISION TOWER TO DEVICE MAP {device_map}")
             vision_tower.to(device=device_map, dtype=torch.float16)
         image_processor = vision_tower.image_processor
 
