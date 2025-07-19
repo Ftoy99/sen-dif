@@ -24,8 +24,6 @@ deepspeed /mnt/jimmys/sen-dif/Senna/llava/senna/train_senna_llava_multi_img.py \
     --init_weight_img_adapter False \
     --model_name_or_path $MODEL_PATH \
     --version v1 \
-    --offload_param \
-    --offload_optimizer \
     --data_path $DATA \
     --vision_tower openai/clip-vit-large-patch14-336 \
     --mm_projector_type mlp2x_gelu \
