@@ -24,6 +24,8 @@ deepspeed /mnt/jimmys/sen-dif/Senna/llava/senna/train_senna_llava_multi_img.py \
     --init_weight_img_adapter False \
     --model_name_or_path $MODEL_PATH \
     --version v1 \
+    --offload_param \
+    --offload_optimizer \
     --data_path $DATA \
     --vision_tower openai/clip-vit-large-patch14-336 \
     --mm_projector_type mlp2x_gelu \
@@ -35,9 +37,9 @@ deepspeed /mnt/jimmys/sen-dif/Senna/llava/senna/train_senna_llava_multi_img.py \
     --bf16 True \
     --output_dir $OUT_DIR \
     --num_train_epochs 1 \
-    --per_device_train_batch_size 8 \
-    --per_device_eval_batch_size 8 \
-    --gradient_accumulation_steps 3 \
+    --per_device_train_batch_size 2 \
+    --per_device_eval_batch_size 2 \
+    --gradient_accumulation_steps 2 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
     --save_steps 200 \
