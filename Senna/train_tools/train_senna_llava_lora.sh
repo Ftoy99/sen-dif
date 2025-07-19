@@ -17,19 +17,15 @@ ln -s /cluster_home/custom_data/data/Senna/data .
 ln -s /cluster_home/custom_data/data/Senna/checkpoints .
 
 
-# specify the python path
-export PATH=/path/to/your/python//bin:$PATH
-
-
-deepspeed llava/senna/train_senna_llava_multi_img.py \
-    --deepspeed llava/zero3.json \
+deepspeed Senna/llava/senna/train_senna_llava_multi_img.py \
+    --deepspeed Senna/llava/zero3.json \
     --lora_enable True --lora_r 128 --lora_alpha 256 --mm_projector_lr 2e-5 \
     --freeze_img_adapter False \
     --init_weight_img_adapter False \
     --model_name_or_path MODEL_PATH \
     --version v1 \
     --data_path $DATA \
-    --vision_tower /path/to/clip-vit-large-patch14-336/ \
+    --vision_tower openai/clip-vit-large-patch14-336 \
     --mm_projector_type mlp2x_gelu \
     --mm_vision_select_layer -2 \
     --mm_use_im_start_end False \
