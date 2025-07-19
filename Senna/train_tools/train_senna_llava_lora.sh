@@ -17,7 +17,7 @@ ln -s /cluster_home/custom_data/data/Senna/data .
 ln -s /cluster_home/custom_data/data/Senna/checkpoints .
 
 
-deepspeed Senna/llava/senna/train_senna_llava_multi_img.py \
+deepspeed /mnt/jimmys/sen-dif/Senna/llava/senna/train_senna_llava_multi_img.py \
     --deepspeed Senna/llava/zero3.json \
     --lora_enable True --lora_r 128 --lora_alpha 256 --mm_projector_lr 2e-5 \
     --freeze_img_adapter False \
