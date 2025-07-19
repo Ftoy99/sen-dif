@@ -2,7 +2,7 @@
 
 MODEL_PATH="/mnt/jimmys/sen-dif/Senna/models/Senna"
 DATA="/mnt/jimmys/sen-dif/nu_mini_adapted/senna_nusc_train.json"
-OUT_DIR="/mnt/jimmys/sen-dif/Senna/models/Senna"
+OUT_DIR="/mnt/jimmys/sen-dif/Senna/models/Senna/Lora"
 
 cd ${WORKING_PATH}
 
@@ -13,8 +13,8 @@ export NCCL_IB_DISABLE="1"
 
 
 # add python envs & data dir to workspace
-ln -s /cluster_home/custom_data/data/Senna/data .
-ln -s /cluster_home/custom_data/data/Senna/checkpoints .
+ln -s /mnt/jimmys/sen-dif/data .
+ln -s /mnt/jimmys/sen-dif/checkpoints .
 
 
 deepspeed /mnt/jimmys/sen-dif/Senna/llava/senna/train_senna_llava_multi_img.py \
