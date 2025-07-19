@@ -1,8 +1,8 @@
 #!/bin/bash
 
-MODEL_PATH="/mnt/jimmys/sen-dif/models/Senna"
+MODEL_PATH="/mnt/jimmys/sen-dif/Senna/models/Senna"
 DATA="/mnt/jimmys/sen-dif/nu_mini_adapted/senna_nusc_train.json"
-OUT_DIR="/mnt/jimmys/sen-dif/models/Senna/Lora"
+OUT_DIR="/mnt/jimmys/sen-dif/Senna/models/Senna"
 
 cd ${WORKING_PATH}
 
