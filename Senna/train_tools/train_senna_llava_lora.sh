@@ -22,7 +22,7 @@ deepspeed /mnt/jimmys/sen-dif/Senna/llava/senna/train_senna_llava_multi_img.py \
     --lora_enable True --lora_r 128 --lora_alpha 256 --mm_projector_lr 2e-5 \
     --freeze_img_adapter False \
     --init_weight_img_adapter False \
-    --model_name_or_path MODEL_PATH \
+    --model_name_or_path $MODEL_PATH \
     --version v1 \
     --data_path $DATA \
     --vision_tower openai/clip-vit-large-patch14-336 \
